@@ -82,8 +82,8 @@ depart %>% head()
 ts.plot(depart)
 
 #### 평활 하기
-mindex_sma3 <- SMA(depart, n = 3) #평활지수 3
-mindex_sma12 <- SMA(depart, n = 12) #평활지수 10
+depart_sma3 <- SMA(depart, n = 3) #평활지수 3
+depart_sma12 <- SMA(depart, n = 12) #평활지수 10
 
 plot.ts(depart , lwd = 2)
 lines(depart_sma3 ,
@@ -97,7 +97,7 @@ lines(depart_sma12 ,
 #여름과 계절이 다 들어간 1년치 값들임(한 값들이) 그래서 flat하게 나타남
 #원자료에서 depart_sma12를 빼면 계절 성분만 남게 됨
 
-plot.ts(mindex - depart_sma12) #약간의 이분산성이 있어 보이지만..
+plot.ts(depart - depart_sma12) #약간의 이분산성이 있어 보이지만..
 
 ### 단순지수평활법
 z <- scan('mindex.txt')#mindex data이용용
