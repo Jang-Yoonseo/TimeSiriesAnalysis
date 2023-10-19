@@ -7,8 +7,9 @@ library(tidyverse)
 
 ######################TSDA hw 2
 ### 1번
-
 #### 1-1
+z <- scan('mindex.txt')
+mindex <- 
 
 ### 2번
 
