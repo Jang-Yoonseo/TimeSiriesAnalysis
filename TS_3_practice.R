@@ -3,7 +3,7 @@
 
 #install.packages(c('forecast','data.table','lmtest','TTR'))
 
-library(forecast) #ses 단순지수수 평활
+library(forecast) #ses 단순지수 평활
 library(data.table)
 library(ggplot2)
 library(lmtest) #dwtest
