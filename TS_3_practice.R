@@ -28,7 +28,7 @@ lines(kingstimeseriesSMA3,
       lwd = 2) #window =3 이동평균법
 legend(
   "topleft",
-  #범례례
+  #범례
   legend = c('original', expression(m == 3)),
   col = c('black', 'red'),
   lty = c(1, 2),
@@ -75,7 +75,7 @@ mean(abs(kings[-1] - SMA(kingstimeseries, n = 10)[-42]) / kings[-1], na.rm = T) 
 #비교는 예측에 좀 더 비중이 있다.
 #smoothing을 잘 할수록 오차가 커진다.
 
-### mindex data
+### depart data
 z <- scan('depart.txt')
 depart <- ts(z, start = c(1986, 1), frequency = 12)
 depart %>% head()
