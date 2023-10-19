@@ -331,3 +331,12 @@ legend("topleft", lty=1:2, col=c("blue","red"), c("Pass", "Multiplicative"))
 #### 예측성능 비교
 fit_hw$SSE ; fit_hw_m$SSE
 #1번 즉, 가법 모형의 예측성능이 더 우수하다.
+
+#잔차그림
+ts.plot(fit7$residual, ylab="residual",
+        main="승법모형의 잔차 그림", 
+        cex.main=2); abline(h=0)
+
+#오차는 독립인가??
+dwtest(lm(fit7$residual~1), alternative = 'two.sided')
+#독립이라고 볼 수 있다 p-값 0.8931
