@@ -177,10 +177,10 @@ legend("topleft",
        c("원시계열 ", "추정값 "))
 
 #pred_a #가법
-#pred #승법
+#pred_m #승법
 ts.plot(
   food,
-  pred_a,
+  exp(pred_a),
   pred_m,
   col = 1:3,
   lty = c(1, 1, 2),
@@ -188,6 +188,7 @@ ts.plot(
   ylab = "food",
   main = "원시계열과 분해법에 의한 추정값 "
 )
+
 
 #가법
 sum((food - exp(pred_a)) ^ 2)  ##SSE
