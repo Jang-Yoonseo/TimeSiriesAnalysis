@@ -120,7 +120,7 @@ legend("topleft",
        c("원시계열", "추세성분", "2차 추세성분"))
 
 #2 계절성분 추정
-## 원 시 계 열 에 서     추 세 성 분     조 정
+## 원시계열에서 추세성분  조정
 trend_1 = fitted(fit3)
 adjtrend_1 = food / trend_1
 plot.ts(adjtrend_1)
